@@ -2,7 +2,7 @@
 #define GrovePWMActuator_H
 
 #include <Arduino.h>
-#include "../Grove/Grove.h"
+#include <Grove.h>
 
 class GrovePWMActuator {
 	private:
