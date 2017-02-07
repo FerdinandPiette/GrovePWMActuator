@@ -8,18 +8,18 @@ Generic PWM Actuator Library for Arduino + Grove shield
 GrovePWMActuator motor;
 
 void setup() {
-  motor.initialize(GROVE_D8);
+  motor.initialize(GROVE_D3);
   motor.turnOff();
 }
 
 void loop() {
   float command;
   for(command = 0; command < 1; command += 0.1) {
-	led.setCommand(command);
+	motor.setCommand(command);
 	delay(100);
   }
   for(command = 1; command > 0; command -= 0.1) {
-	led.setCommand(command);
+	motor.setCommand(command);
 	delay(100);
   }
 }
